@@ -28,8 +28,8 @@ const FormRegistro = () =>{
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <div class="display-t js-fullheight">
-                            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                        <div className="display-t js-fullheight">
+                            <div className="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                               <h1>Registrar</h1>
                             </div>
                         </div>
@@ -37,11 +37,11 @@ const FormRegistro = () =>{
                 </div>
             <form onSubmit={register}>
                 
-                <div class="form-group"><input type="text" placeholder="Nombre" onChange={(e) =>{ setNombre(e.target.value)}} class="form-control" /></div>
-                <div class="form-group"><input class="form-control" type="date" onChange={(e) =>{ setFecha(e.target.value)}} placeholder="Fecha de nacimiento"/></div>
-                <div class="form-group"><input class="form-control bg-inputs-da" type="email" onChange={(e) =>{ setEmail(e.target.value)}} placeholder="Correo"/></div>
-                <div class="form-group"><input class="form-control" type="password" placeholder="Contraseña" onChange={(e) =>{ setContrasenia(e.target.value)}}/></div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Registrar</button></div>
+                <div className="form-group"><input type="text" placeholder="Nombre" onChange={(e) =>{ setNombre(e.target.value)}} className="form-control" /></div>
+                <div className="form-group"><input className="form-control" type="date" onChange={(e) =>{ setFecha(e.target.value)}} placeholder="Fecha de nacimiento"/></div>
+                <div className="form-group"><input className="form-control bg-inputs-da" type="email" onChange={(e) =>{ setEmail(e.target.value)}} placeholder="Correo"/></div>
+                <div className="form-group"><input className="form-control" type="password" placeholder="Contraseña" onChange={(e) =>{ setContrasenia(e.target.value)}}/></div>
+                <div className="form-group"><button className="btn btn-primary btn-block" type="submit">Registrar</button></div>
             </form>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

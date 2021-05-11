@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-}from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './login/FormLogin';
 import Registro from './login/FormRegister';
 import Footer from './partial/footer';
@@ -17,33 +12,19 @@ import Blog from './web/header/blog.jsx';
 const Rutas = () => {
   return (
     <>
-
-    HOLA MUNDO
-{/*       <Navbar/>
-        <br/><br/><br/><br/><br/><br/><br/>
-        <Switch>
-          <Route exact path="/inicio" render={(props)=> (<Home {...props}/>)}/>
-          <Route path="nosotros">
-            <About/>
-          </Route>
-          <Route path="contactos">
-            <Contact/>
-          </Route>
-          <Route path="login">
-            <Login/>
-          </Route>
-          <Route path="registro">
-            <Registro/>
-          </Route>
-          <Route path="blog">
-            <Blog/>
-
-          </Route>
-          <Redirect to="/inicio"/>
-        </Switch>
-        <Footer/> */}
-
-            </>
+      <Navbar/>
+      <br/><br/><br/><br/><br/><br/><br/>
+      <Switch>
+        <Route exact path="/inicio" render={(props) => (<Home {...props} />)} />
+        <Route exact path="/nosotros" render={(props) => (<About {...props} />)} />
+        <Route exact path="/contactos" render={(props) => (<Contact {...props} />)} />
+        <Route exact path="/login" render={(props) => (<Login {...props} />)} />
+        <Route exact path="/registro" render={(props) => (<Registro {...props} />)} />
+        <Route exact path="/blog" render={(props) => (<Blog {...props} />)} />
+        <Redirect to="/inicio"/>
+      </Switch>
+      <Footer/>
+    </>
   );
 }
 

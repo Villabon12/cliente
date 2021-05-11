@@ -23,7 +23,7 @@ const FormLogin = ()=>{
                 `${process.env.REACT_APP_API}/login/login`,
                 {email: email.value, contrasenia: contrasenia.value}
             );
-            if (data.exist == 0) {
+            if (data.exist === 0) {
                 setFormLogin({
                     email: {value: '', err: true},
                     contrasenia: {value: '', err: true},
@@ -113,8 +113,8 @@ const FormLogin = ()=>{
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div class="display-t js-fullheight">
-                            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                            <div className="display-t js-fullheight">
+                            <div className="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                   
                               <h1>Inicia Sesion</h1>
                             </div>
@@ -130,9 +130,9 @@ const FormLogin = ()=>{
                                 Credenciales invalidas. Vuelve a intentarlo
                             </div>
                         )}</div>
-                        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Iniciar</button></div>
+                        <div className="form-group"><button className="btn btn-primary btn-block" type="submit">Iniciar</button></div>
 
-                        <a href="registro" class="forgot">Registrar</a>
+                        <a href="registro" className="forgot">Registrar</a>
                     </form> 
                   </div>           
                 </div>

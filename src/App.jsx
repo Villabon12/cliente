@@ -2,7 +2,6 @@ import { AuthContext } from "./auth/AuthContex";
 import React, { useReducer, useEffect } from "react";
 import authReducer from './auth/authReducer';
 import { Routeapp } from "./route/routeApp";
-import Rutas from "./componente/Rutas"
 
 
 const init = () => {
@@ -15,12 +14,9 @@ function App(){
         localStorage.setItem('idUserLoged', JSON.stringify(user))
     }, [user]);
     return(
-        <>
         <AuthContext.Provider value={{ user, dispatch }}>
-            <Rutas/>
-
+            <Routeapp/>
         </AuthContext.Provider>
-        </>
     );
 }
 
