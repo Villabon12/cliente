@@ -11,7 +11,7 @@ export const Routeapp = () => {
     return (
         <Router>
             <Switch>
-                <PublicRoute path="/" component={Rutas} isAuthenticated = {user.logged}/>
+                <PublicRoute path="/" component={Rutas} isAuthenticated={user.logged}/>
                 {/* <PrivateRoute exact path="/admin" component={Dashboard} isAuthenticated = {user.logged}/> */}
             </Switch>
         </Router>

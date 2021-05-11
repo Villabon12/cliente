@@ -1,10 +1,12 @@
 import React from 'react'
-import { Redirect, Route } from 'react-router'
+import { Route } from 'react-router'
 
-export const PublicRoute = ({isAuthenticated, component: publicComponent, ...rest}) => {
+export const PublicRoute = ({isAuthenticated, component: PublicComponent, ...rest}) => {
     return (
         <Route {...rest} render={(props)=>(
-            (!isAuthenticated)&& <publicComponent {...props}/>
+            (!isAuthenticated)
+                ? <PublicComponent {...props} />
+                : <PublicComponent {...props} />
         )}/>
     )
 }

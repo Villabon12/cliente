@@ -5,20 +5,19 @@ import React from 'react';
 const Navbar = (props)=>{
     return(
         <div id="page">
-            <nav class="fh5co-nav" role="navigation">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 text-center logo-wrap">
+            <nav className="fh5co-nav" role="navigation">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12 text-center logo-wrap">
                             <div id="fh5co-logo"><a href="inicio">Sisu<span>.</span></a></div>
-                        </div>    
-                      
-                        <div class="col-xs-12 text-center menu-1 menu-wrap">
+                        </div>
+                        <div className="col-xs-12 text-center menu-1 menu-wrap">
                             <ul>
-                                <li class=""><a href="inicio">Inicio</a></li>
+                                <li className=""><a href="inicio">Inicio</a></li>
                                 <li><a href="blog">Blog</a></li>
-                                <li class="has-dropdown">
+                                <li className="has-dropdown">
                                     <a href="producto">Productos</a>
-                                    <ul class="dropdown">
+                                    <ul className="dropdown">
                                         <li><a href="#">Caliente</a></li>
                                         <li><a href="#">Frio</a></li>
                                         <li><a href="#">Cocteles</a></li>
