@@ -11,12 +11,8 @@ const Usuario = () =>{
         .then(res => setUsuario(res))
     }
 
-    const updUser = () =>{
-        
-    }
     useEffect(() => {
         getUser()
-        updUser()
     }, [])
     
     return(
