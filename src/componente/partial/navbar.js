@@ -16,7 +16,7 @@ const Navbar = (props)=>{
                                 <li className=""><a href="inicio">Inicio</a></li>
                                 <li><a href="blog">Blog</a></li>
                                 <li className="has-dropdown">
-                                    <a href="producto">Productos</a>
+                                    <a href="productos">Productos</a>
                                     <ul className="dropdown">
                                         <li><a href="#">Caliente</a></li>
                                         <li><a href="#">Frio</a></li>
