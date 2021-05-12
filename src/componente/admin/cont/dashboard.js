@@ -4,8 +4,8 @@ const Dashboard = (props) =>{
     return(
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                        <a class="" href="">
-                            <img src="" />
+                        <a class="" href="#s">
+                            <img src="" alt="aa"/>
                         </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
