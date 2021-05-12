@@ -14,31 +14,23 @@ import Dashboard from './admin/cont/dashboard'
 function App() {
   return (
     <>
-    <Router>
-        <Dashboard/>
-        <Switch>
-          <Route path="/home">
-            <Homead/>
-          </Route>
-          <Route path="/productos">
-            <Producto/>
-          </Route>
-          <Route path="/pedidos">
-            <Pedidos/>
-          </Route>
-          <Route path="/usuarios">
-            <Usuarios/>
-          </Route>
-          <Route path="/blog">
-            <Blog/>
-          </Route>
-        </Switch>
-
-    </Router>
-
-    <Router>
-    </Router>
-            </>
+      <Dashboard/>
+      <Switch>
+        <Route path="/home" />
+        <Route path="/productos">
+          <Producto/>
+        </Route>
+        <Route path="/pedidos">
+          <Pedidos/>
+        </Route>
+        <Route path="/usuarios">
+          <Usuarios/>
+        </Route>
+        <Route path="/blog">
+          <Blog/>
+        </Route>
+      </Switch>
+    </>
   );
 }
 
