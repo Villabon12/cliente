@@ -1,8 +1,13 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 const Navbar = (props)=>{
+/*     const [logged, setlogged] = useState(null)
+    useEffect(() => {
+      const {idUserLoged} = JSON.parse(localStorage.getItem('idUserLoged'))
+       console.log('hola', idUserLoged)
+    }, []) */
     return(
         <div id="page">
             <nav className="fh5co-nav" role="navigation">

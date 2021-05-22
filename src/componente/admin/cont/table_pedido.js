@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Table_pedido = (props) => {
+const Table_pedido = (pedido) => {
     return(
         <div class="col-lg-12">
             <h2 class="title-1 m-b-25">Pedido</h2>                           
@@ -25,14 +25,11 @@ const Table_pedido = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>id</td>
-                                <td> usuario_id </td>
-                                <td>producto_id </td>
-                                <td> cantidad </td>
-                                <td class="text-right"> detalle </td>
-                                <td class="text-right"> precio </td>
-                                <td class="text-right"> total </td>
+                    {pedido.map((pedido)=>(
+                        <tr key={pedido.id}>
+                            <td>{pedido.id}</td>
+                            <td>{pedido.descripcion} </td>
+                            <td class="text-right"> {pedido.imagen} </td>
                             <td>
                                 <div class="container">
                                     <div class="table-data-feature">
@@ -46,6 +43,7 @@ const Table_pedido = (props) => {
                                 </div>
                             </td>
                         </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>

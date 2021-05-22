@@ -1,6 +1,7 @@
 import React from 'react';
+import Usuario from '../usuario';
 
-const Table_producto = (props) => {
+const Table_producto = ({producto}) => {
     return(
         <div class="col-lg-12">
             <h2 class="title-1 m-b-25">Producto</h2>                           
@@ -23,12 +24,14 @@ const Table_producto = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>id</td>
-                            <td>producto_id </td>
-                            <td class="text-right"> detalle </td>
-                            <td class="text-right"> precio </td>
-                            <td class="text-right"> Imagen </td>
+                        {producto.map((producto)=>(
+                        <tr key={producto.id}>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre} </td>
+                            <td class="text-right"> {producto.descripcion} </td>
+                            <td class="text-right"> {producto.precio} </td>
+                            <td class="text-right"> {producto.imagen} </td>
+                            <td class="text-right"> {producto.categoria_id} </td>
                             <td>
                                 <div class="container">
                                     <div class="table-data-feature">
@@ -42,6 +45,8 @@ const Table_producto = (props) => {
                                 </div>
                             </td>
                         </tr>
+
+                        ))}
                     </tbody>
                 </table>
             </div>

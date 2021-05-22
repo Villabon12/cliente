@@ -19,10 +19,12 @@ const FormLogin = ()=>{
 
     const login = useCallback(async() =>{
         try {
+          console.log(process.env.REACT_APP_API)
             const {data} = await axios.post(
-                `${process.env.REACT_APP_API}/login/login`,
+                `${process.env.REACT_APP_API}/login/iniciar`,
                 {email: email.value, contrasenia: contrasenia.value}
             );
+            
             if (data.exist === 0) {
                 setFormLogin({
                     email: {value: '', err: true},

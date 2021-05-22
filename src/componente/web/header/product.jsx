@@ -3,16 +3,53 @@ import Contenido from '../content/productcont';
 
 const Product = ()=>{
 
-    const [productos, setProducto] = useState([])
+    const [caliente, setCaliente] = useState([])
+    const [bebidas, setBebidas] = useState([])
+    const [frios, setFrios] = useState([])
+    const [postres, setPostres] = useState([])
+    const baseUrl = process.env.REACT_APP_API
 
-    const getProduct = () =>{
-        fetch('http://localhost:4000/producto')
+    const getCaliente = () =>{
+        fetch(`http://localhost:4000/producto/caliente`)
         .then(res => res.json())
-        .then(res => setProducto(res))
+        .then(res => setCaliente(res))
     }
 
     useEffect(()=> {
-        getProduct()
+        getCaliente()
+    },[])
+
+
+    const getFrios = () =>{
+        fetch('http://localhost:4000/producto/frio')
+        .then(res => res.json())
+        .then(res => setFrios(res))
+    }
+
+    useEffect(()=> {
+        getFrios()
+    },[])
+
+
+    const getPostres = () =>{
+        fetch('http://localhost:4000/producto/postres')
+        .then(res => res.json())
+        .then(res => setPostres(res))
+    }
+
+    useEffect(()=> {
+        getPostres()
+    },[])
+
+
+    const getBebidas = () =>{
+        fetch('http://localhost:4000/producto/bebidas')
+        .then(res => res.json())
+        .then(res => setBebidas(res))
+    }
+
+    useEffect(()=> {
+        getBebidas()
     },[])
 
     return(
@@ -32,7 +69,7 @@ const Product = ()=>{
                 </div>
             </div>
 
-            <Contenido productos ={productos} />
+            <Contenido bebidas ={bebidas} postres = {postres} caliente={caliente} frios={frios}/>
 
         </>
     );

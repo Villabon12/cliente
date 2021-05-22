@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 }from 'react-router-dom';
 import Homead from './admin/homead';
 import Producto from './admin/productoad';
@@ -11,35 +11,23 @@ import Usuarios from './admin/usuario';
 import Blog from './admin/blogad';
 import Dashboard from './admin/cont/dashboard'
 
-function App() {
+function RutasD() {
   return (
     <>
-    <Router>
         <Dashboard/>
         <Switch>
-          <Route path="/home">
-            <Homead/>
-          </Route>
-          <Route path="/productos">
-            <Producto/>
-          </Route>
-          <Route path="/pedidos">
-            <Pedidos/>
-          </Route>
-          <Route path="/usuarios">
-            <Usuarios/>
-          </Route>
-          <Route path="/blog">
-            <Blog/>
-          </Route>
+        <Route exact path="/home" render={(props) => (<Homead {...props} />)} />
+        <Route exact path="/productos" render={(props) => (<Producto {...props} />)} />
+        <Route exact path="/pedidos" render={(props) => (<Pedidos {...props} />)} />
+        <Route exact path="/usuarios" render={(props) => (<Usuarios {...props} />)} />
+        <Route exact path="/blog" render={(props) => (<Blog {...props} />)} />
+
+        <Redirect to="/home"/>
+
         </Switch>
 
-    </Router>
-
-    <Router>
-    </Router>
             </>
   );
 }
 
-export default App;
+export default RutasD;

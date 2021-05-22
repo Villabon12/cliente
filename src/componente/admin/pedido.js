@@ -1,7 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import TableP from './cont/table_pedido'
 
-const Pedido = (props) =>{
+const Pedido = () =>{
+
+    const [pedido, setPedido] = useState([])
+
+    const getPedido = () =>{
+        fetch('http://localhost:4000/cart/')
+        .then(res => res.json())
+        .then(res => setPedido(res))
+    }
+
+    useEffect(()=> {
+        getPedido()
+    },[])
     return(
     <>
     <div class="page-wrapper">
@@ -10,7 +22,7 @@ const Pedido = (props) =>{
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <TableP/>
+                            <TableP pedido={pedido}/>
                             <br/>
                             <div class="table-data__tool-right">
                                 <button class="au-btn au-btn-icon au-btn--green au-btn--small">

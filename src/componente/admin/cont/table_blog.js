@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Table_blog = (props) => {
+const Table_blog = (blog) => {
     return(
         <div class="col-lg-12">
             <h2 class="title-1 m-b-25">Blog</h2>                           
@@ -22,11 +22,12 @@ const Table_blog = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>id</td>
-                            <td>publicacion </td>
-                            <td> imagen </td>
-                            <td> usuario </td>
+                    {blog.map((blog)=>(
+                        <tr key={blog.id}>
+                            <td>{blog.id}</td>
+                            <td>{blog.descripcion} </td>
+                            <td class="text-right"> {blog.imagen} </td>
+                            <td class="text-right"> {blog.usuario_id} </td>
                             <td>
                                 <div class="container">
                                     <div class="table-data-feature">
@@ -40,6 +41,7 @@ const Table_blog = (props) => {
                                 </div>
                             </td>
                         </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
